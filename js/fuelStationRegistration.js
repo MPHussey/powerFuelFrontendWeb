@@ -4,8 +4,8 @@ $(document).ready(function(){
        $("#stRegister-modal").modal("show");
     });
 
-    $('.form-stationRegister').on('submit',function(event){
-        event.preventDefault();
+    $('.form-stationRegister').submit(function(event){
+
         var fuelStation_name=$('#station-name').val();
         var station_address=$('#station-address').val();
         var mobile_number=$('#mobile-number').val();
@@ -34,15 +34,43 @@ $(document).ready(function(){
             contentType:"application/json",
             success:function(data){
                 console.log(data);
+                viewAllStationData();
             }
 
         })
 
-
-
-
+        event.preventDefault();
 
     })
+
+    viewAllStationData();
+    function viewAllStationData(){
+        $.ajax({
+            type:"POST",
+            url:"http://localhost:8080/fuelstation/viewAll",
+            data:{},
+            crossDomain:true,
+            contentType:"application/json",
+            success:function(data){
+                var temp="";
+                for(var i in data){
+                    temp+='<tr>\n' +
+                        '                                                <td></td>\n' +
+                        '                                                <td>'+data[i]["name"]+'</td>\n' +
+                        '                                                <td>'+data[i]["address"]+'</td>\n' +
+                        '                                                <td>'+data[i]["mobile"]+'</td>\n' +
+                        '                                                <td>'+data[i]["email"]+'</td>\n' +
+                        '                                                <td>'+data[i]["district"]+'</td>\n' +
+                        '                                                <td>'+data[i]["petrolCapacity"]+'</td>\n' +
+                        '                                                <td>'+data[i]["dieselCapacity"]+'</td>\n' +
+                        '                                            </tr>';
+                }
+
+                $('.view-all-stations').html(temp);
+            }
+
+        })
+    }
 
 
 

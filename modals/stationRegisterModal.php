@@ -76,7 +76,7 @@
                     </div>
                     <div class="form-group row">
                         <div  class="col-sm-6">
-                            <input class="btn btn-primary form-control" type="submit" id="btn-register" name="btn-register" value="Reserve Now">
+                            <input class="btn btn-primary form-control" type="submit" id="btn-register" name="btn-register" value="Register">
                         </div>
                     </div>
                 </form>

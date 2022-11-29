@@ -16,8 +16,8 @@
 <div id="wrapper">
     <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
         <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                <div class="sidebar-brand-icon "><img width="45px" src="assets/img/icons/caricon.png"></div>
-                <div class="sidebar-brand-text mx-3"><span>Power Fuel</span></div>
+                <div class="sidebar-brand-icon "><img width="45px" src="assets/img/icons/icons8-fire-60.png"></div>
+                <div class="sidebar-brand-text mx-3"><span>PowerFuel</span></div>
             </a>
             <hr class="sidebar-divider my-0">
             <ul class="navbar-nav text-light" id="accordionSidebar">
@@ -75,7 +75,17 @@
                                                 <th>Diesel Cap.</th>
                                             </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody class="view-all-stations">
+<!--                                            <tr>-->
+<!--                                                <td></td>-->
+<!--                                                <td>Captain America</td>-->
+<!--                                                <td>49,Balabowa,Dewalapola</td>-->
+<!--                                                <td>071317665</td>-->
+<!--                                                <td>haantha95@hotmail.com</td>-->
+<!--                                                <td>Gampaha</td>-->
+<!--                                                <td>12000</td>-->
+<!--                                                <td>10000</td>-->
+<!--                                            </tr>-->
 
 
                                             </tbody>
