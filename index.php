@@ -73,6 +73,7 @@
                                                 <th>District</th>
                                                 <th>Petrol Cap.</th>
                                                 <th>Diesel Cap.</th>
+                                                <th></th>
                                             </tr>
                                             </thead>
                                             <tbody class="view-all-stations">
