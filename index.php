@@ -22,7 +22,7 @@
             <hr class="sidebar-divider my-0">
             <ul class="navbar-nav text-light" id="accordionSidebar">
                 <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i><span>Register Stations</span></a></li>
+                <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-user"></i><span>Register Stations</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-key"></i><span>Title -3</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Title -4</span></a></li>
                 <!--<li class="nav-item"><a class="nav-link" href="register.php"><i class="fas fa-user-circle"></i><span>Register</span></a></li> ----->
@@ -49,63 +49,9 @@
                 </div>
             </nav>
             <div class="container-fluid">
-                <!--                <div class="d-sm-flex justify-content-between align-items-center mb-4">-->
-                <!--                    <h3 class="text-dark mb-0">Dashboard</h3>-->
-                <!--                </div>-->
-                <div class="row">
-                    <div class="col-lg-12 col-xl-12 mt-3">
-                        <div class="card shadow">
-                            <div class="card-header py-3 d-flex justify-content-between">
-                                <p class="text-primary m-0 font-weight-bold">Fuel Station Registration</p>
-                                <img class="register-station-modal-pop" src="./imgs/icons8-add-30.png" alt="add">
-                            </div>
-                            <div class="card-body">
-                                <div style="height:600px; overflow-y:auto;" class="table-responsive table mt-2"  role="grid" aria-describedby="dataTable_info">
-                                    <div class="table-outter-frame">
-                                        <table class="table my-0" id="dataTable">
-                                            <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>Station Name</th>
-                                                <th>Address</th>
-                                                <th>Mobile No.</th>
-                                                <th>Email address</th>
-                                                <th>District</th>
-                                                <th>Petrol Cap.</th>
-                                                <th>Diesel Cap.</th>
-                                                <th></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody class="view-all-stations">
-<!--                                            <tr>-->
-<!--                                                <td></td>-->
-<!--                                                <td>Captain America</td>-->
-<!--                                                <td>49,Balabowa,Dewalapola</td>-->
-<!--                                                <td>071317665</td>-->
-<!--                                                <td>haantha95@hotmail.com</td>-->
-<!--                                                <td>Gampaha</td>-->
-<!--                                                <td>12000</td>-->
-<!--                                                <td>10000</td>-->
-<!--                                            </tr>-->
+               <!---Please Include all the page paths here ---->
+                <?php include("pages/register-station.php") ?>
 
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                            <ul class="pagination">
-
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>

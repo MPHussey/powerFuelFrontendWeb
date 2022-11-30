@@ -12,7 +12,7 @@
                 <form class="form-stationRegister">
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <input type="text" name="station-id" id="station-id">
+                            <input type="hidden" name="station-id" id="station-id">
                             <label for="station-name">Fuel Station Name</label>
                             <input class="form-control" type="text" id="station-name" name="station-name" placeholder="Enter Fuel Station Name" required>
 
