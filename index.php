@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <script src="https://kit.fontawesome.com/4e60d43ec8.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="page-top">
@@ -23,7 +24,7 @@
             <ul class="navbar-nav text-light" id="accordionSidebar">
                 <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                 <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-user"></i><span>Register Stations</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-key"></i><span>Title -3</span></a></li>
+                <li id="nav-fuel-request" class="nav-item"><a class="nav-link" href="#fuel-request"><i class="fa-solid fa-gas-pump"></i><span>Fuel Requests</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Title -4</span></a></li>
                 <!--<li class="nav-item"><a class="nav-link" href="register.php"><i class="fas fa-user-circle"></i><span>Register</span></a></li> ----->
             </ul>
@@ -51,6 +52,7 @@
             <div class="container-fluid">
                <!---Please Include all the page paths here ---->
                 <?php include("pages/register-station.php") ?>
+                <?php include("pages/fuel-request.php") ?>
 
 
             </div>
@@ -63,6 +65,7 @@
 
 <!--dashboard related modal imports-->
 <?php include "modals/stationRegisterModal.php"?>
+<?php include "modals/fuelRequestModal.php" ?>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -72,6 +75,7 @@
 <script src="assets/js/theme.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/fuelStationRegistration.js"></script>
+<script src="js/requestFuel.js"></script>
 </body>
 
 </html>
