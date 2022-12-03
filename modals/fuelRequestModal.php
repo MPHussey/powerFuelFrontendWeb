@@ -12,39 +12,41 @@
                 <form class="form-fuelRequest">
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <input type="hidden" name="station-id" id="station-id">
-                            <label for="vehicle-make">Select Fuel Type</label>
+                            <input type="hidden" name="request-id" id="request-id">
+                            <label for="fuel-type">Select Fuel Type</label>
                             <select name="fuel-type" id="fuel-type" class="form-control">
                                 <option value="-">Select Fuel Type</option>
-                                <option value="1">Petrol</option>
-                                <option value="2">Diesel</option>
+                                <option value="Petrol">Petrol</option>
+                                <option value="Diesel">Diesel</option>
 
                             </select>
                         </div>
                         <div class="col-sm-6">
+                            <label for="vehicle-model">Request Fuel</label>
+                            <input class="form-control" type="text" id="requested-amount" name="requested-amount" placeholder="Request Fuel Amount (Liters)">
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 fuelRequest-status-Section">
 
                             <label for="vehicle-make">Fuel Request Status</label>
-                            <select name="fuel-type" id="fuel-type" class="form-control">
+                            <select name="request-status" id="request-status" class="form-control">
                                 <option value="-">Select Status</option>
-                                <option value="1">Pending</option>
-                                <option value="2">Dispatched</option>
-                                <option value="3">Delivered</option>
+                                <option value="pending">Pending</option>
+                                <option value="approved">Approved</option>
+                                <option value="delivered">Delivered</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="vehicle-model">Requested Quantity</label>
-                            <input class="form-control" type="text" id="mobile-number" name="mobile-number" placeholder="Enter Mobile Number" required>
-                        </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 receivedAmount-section">
                             <label for="vehicle-year">Received Quantity</label>
-                            <input class="form-control" type="text" id="email" name="email" placeholder="Enter Email Address" required>
+                            <input class="form-control" type="text" id="received-amount" name="received-amount" placeholder="Enter Received Amount (Liters)">
                         </div>
 
                     </div>
 
                     <div class="form-group row">
+
                         <div  class="col-sm-6">
                             <input class="btn btn-primary form-control" type="submit" id="btn-request-fuel" name="btn-request-fuel" value="Request">
                         </div>
