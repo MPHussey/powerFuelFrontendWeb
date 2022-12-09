@@ -43,7 +43,7 @@ $(document).ready(function(){
          contentType:"application/json",
          success:function(data){
             console.log(data);
-
+            fetchAllRequests();
             $('.form-fuelRequest').trigger("reset");
             $("#fuel-request-modal").modal("hide");
 
@@ -52,4 +52,40 @@ $(document).ready(function(){
       })
 
    })
+
+   /*-----Get All Fuel Requests by Station Id-----*/
+   fetchAllRequests();
+   function fetchAllRequests(){
+      var station_id=6;
+      var urlFetch="http://localhost:8080/fuelRequest/fetch";
+      var apiData={"station_id":station_id};
+      $.ajax({
+         type:"POST",
+         url:urlFetch,
+         data:JSON.stringify(apiData),
+         crossDomain: true,
+         contentType:"application/json",
+         success:function(data){
+            console.log(data);
+            var template='';
+
+            for(var i in data){
+               template+='<tr>\n' +
+                   '                                    <td>'+data[i]["fuelRequests"]["request_date"]+'</td>\n' +
+                   '                                    <td>'+data[i]["fuel_type"]+'</td>\n' +
+                   '                                    <td>'+data[i]["batch_num"]+'</td>\n' +
+                   '                                    <td>'+data[i]["requested_quantity"]+'</td>\n' +
+                   '                                    <td>'+data[i]["received_quantity"]+'</td>\n' +
+                   '                                    <td>'+data[i]["status"]+'</td>\n' +
+                   '                                    <td></td>\n' +
+                   '                                </tr>';
+
+            }
+
+            $('.view-all-requests').html(template);
+         }
+
+      });
+   }
+
 });
