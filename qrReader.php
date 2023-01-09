@@ -36,7 +36,7 @@
                             <hr>
                             <div id="form-frame" class="px-5 pb-5 pt-4">
                                 <form class="user" action="itemread-backend.php" method="post">
-                                    <div class="form-group"><input readonly name="text" id="scannedTextMemo" class="form-control read-item" type="text" placeholder="Waiting for an item" name="username"></div>
+                                    <div class="form-group"><input readonly name="text" id="scannedTextMemo" class="form-control read-item" type="text" placeholder="Waiting for a Token" name="username"></div>
                                     <button name="btn-submit" id="btn-submit" class="btn btn-block btn-user btn-cart" type="submit">Submit</button>
                                     <hr>
 
