@@ -24,13 +24,19 @@
             </a>
             <hr class="sidebar-divider my-0">
             <ul class="navbar-nav text-light" id="accordionSidebar">
-                <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-user"></i><span>Register Stations</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-map-marked-alt"></i><span>Register Stations</span></a></li>
                 <li id="nav-fuel-request" class="nav-item"><a class="nav-link" href="#fuel-request"><i class="fa-solid fa-gas-pump"></i><span>Fuel Requests</span></a></li>
+
                 <li id="nav-fuel-allocation" class="nav-item"><a class="nav-link" href="#fuel-allocation"><i class="fa-sharp fa-solid fa-right-to-bracket"></i><span>Fuel Allocations</span></a></li>
                 <li id="nav-fuel-dispatch" class="nav-item"><a class="nav-link" href="#fuel-dispatch"><i class="fa-sharp fa-solid fa-truck-fast"></i><span>Fuel Dispatches</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Title -4</span></a></li>
                 </ul>
+
+                <li id="nav-employee-register" class="nav-item"><a class="nav-link" href="#emp-register"><i class="fas fa-users"></i><span>Register Employees</span></a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="register.php"><i class="fas fa-user-circle"></i><span>Register</span></a></li> ----->
+            </ul>
+
             <div class="text-center d-none d-md-inline mt-4"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
         </div>
     </nav>
@@ -56,8 +62,12 @@
                <!---Please Include all the page paths here ---->
                 <?php include("pages/register-station.php") ?>
                 <?php include("pages/fuel-request.php") ?>
+
                 <?php include("pages/fuel-allocation.php") ?>
                 <?php include("pages/fuel-dispatch.php") ?>
+
+
+                <?php include("pages/employee-register.php") ?>
 
 
 
@@ -72,6 +82,7 @@
 <!--dashboard related modal imports-->
 <?php include "modals/stationRegisterModal.php"?>
 <?php include "modals/fuelRequestModal.php" ?>
+<?php include "modals/employeeRegisterModal.php" ?>
 
 
 <script src="assets/js/jquery.min.js"></script>
@@ -83,8 +94,12 @@
 <script src="js/navigation.js"></script>
 <script src="js/fuelStationRegistration.js"></script>
 <script src="js/requestFuel.js"></script>
+
 <script src="js/fuelAllocation.js"></script>
 <script src="js/fuelDispatch.js"></script>
+
+
+<script src="js/employeeRegister.js"></script>
 
 </body>
 

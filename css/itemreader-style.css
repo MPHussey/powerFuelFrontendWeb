@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+body {
+     font-family: 'Lato', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,109,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+
+.qrscanner video {
+  max-width:85%;
+  max-height: 75%;
+}
+
+
+.row-element {
+  margin-left: 15%;
+    
+}
+
+
+
+
+.read-item,.btn-cart{
+    border-radius: 20px;
+}
+
+
+.btn-cart{
+    background-color: #fff;
+    border-color: #F35B3F;
+    color:#F35B3F;
+}
+
+.btn-cart:hover{
+     background-color:#F35B3F; 
+    color:#fff;
+}
+
+
+
+   

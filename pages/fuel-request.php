@@ -13,7 +13,6 @@
                             <tr>
                                 <th>Rq. Date</th>
                                 <th>Fuel Type</th>
-                                <th>Rq. Status</th>
                                 <th>Batch No.</th>
                                 <th>Requested Quantity</th>
                                 <th>Received Quantity</th>
@@ -22,6 +21,17 @@
                             </tr>
                             </thead>
                             <tbody class="view-all-requests">
+<!--                                <tr>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td>02/03/2022</td>-->
+<!--                                    <td></td>-->
+<!--                                </tr>-->
+
 
                             </tbody>
                         </table>
