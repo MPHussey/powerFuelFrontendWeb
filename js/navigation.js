@@ -5,6 +5,7 @@ $(document).ready(function(){
         /*---Panel Handling-----*/
         $('#station-register-page').css('display','block');
         $('#fuel-request-page').css('display','none');
+        $('#employee-register-page').css('display','none');
         //make all other pages diplay none
 
     });
@@ -12,7 +13,17 @@ $(document).ready(function(){
     $('#nav-fuel-request').on('click',function(){
         /*---Panel Handling-----*/
         $('#station-register-page').css('display','none');
+        $('#employee-register-page').css('display','none');
         $('#fuel-request-page').css('display','block');
+        //make all other pages diplay none
+
+    });
+
+    $('#nav-employee-register').on('click',function(){
+        /*---Panel Handling-----*/
+        $('#station-register-page').css('display','none');
+        $('#employee-register-page').css('display','block');
+        $('#fuel-request-page').css('display','none');
         //make all other pages diplay none
 
     });
@@ -23,11 +34,19 @@ $(document).ready(function(){
             case '#register-station':
                 $('#station-register-page').css('display','block');
                 $('#fuel-request-page').css('display','none');
+                $('#employee-register-page').css('display','none');
                 break;
             case '#fuel-request':
                 /*Add your default view all items section*/
                 $('#fuel-request-page').css('display','block');
                 $('#station-register-page').css('display','none');
+                $('#employee-register-page').css('display','none');
+                break;
+            case '#emp-register':
+                /*Add your default view all items section*/
+                $('#fuel-request-page').css('display','none');
+                $('#station-register-page').css('display','none');
+                $('#employee-register-page').css('display','block');
                 break;
         }
     }
