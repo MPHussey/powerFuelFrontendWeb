@@ -2,7 +2,6 @@ getAllAllocations();
 function getAllAllocations(){
     
 
-
     $.ajax({
         method:"GET",
         url:"http://localhost:8080/fuelAllocation/getFuelAllocations2",

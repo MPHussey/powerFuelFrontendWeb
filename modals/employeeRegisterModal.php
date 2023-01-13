@@ -33,8 +33,9 @@
                             <label for="vehicle-make">Employee Designation</label>
                             <select name="employee-designation" id="employee-designation" class="form-control">
                                 <option value="-">Select Employee Designation</option>
-                                <option value="1">Admin</option>
-                                <option value="2">Fuel Handler</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Fuel Handler">Fuel Handler</option>
+
 
                             </select>
                         </div>
