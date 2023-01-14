@@ -83,6 +83,7 @@
 <?php include "modals/stationRegisterModal.php"?>
 <?php include "modals/fuelRequestModal.php" ?>
 <?php include "modals/employeeRegisterModal.php" ?>
+<?php include "modals/employeeDetailsUpdateModal.php"; ?>
 
 
 <script src="assets/js/jquery.min.js"></script>

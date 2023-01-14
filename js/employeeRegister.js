@@ -81,6 +81,7 @@ $(document).ready(function(){
 
     /*------get single emp data by id-----*/
     $('.view-registered-employees').on('click','.employee-edit-btn',function(){
+        $('#empUpdate-modal').modal('show');
         var emp_id=$(this).data('options').id;
 
         var url='http://localhost:8080/user/viewSingleEmployees';
@@ -95,12 +96,57 @@ $(document).ready(function(){
             crossDomain:true,
             contentType:"application/json",
             success:function(data){
-                console.log(data);
+
+                $('#update-employee-id').val(data[0]['id']);
+                $('#update-employee-name').val(data[0]['name']);
+                $('#update-employee-email').val(data[0]['userName']);
+                $('#update-emp-password').val(data[0]['password']);
+                $('#update-employee-designation').val(data[0]['role']);
+
             }
         })
 
 
     })
+
+
+    /*---------update employee details---*/
+    $('.form-updateEmployee').submit('click',function(event){
+        event.preventDefault();
+        var emp_id=$('#update-employee-id').val();
+        var emp_name=$('#update-employee-name').val();
+        var emp_email=$('#update-employee-email').val();
+        var emp_role=$('#update-employee-designation').val();
+        var emp_password=$('#update-emp-password').val();
+
+        var url='http://localhost:8080/user/updateEmployee';
+        var apiData={
+            "name":emp_name,
+            "password":emp_password,
+            "role":emp_role,
+            "userName":emp_email,
+            "id":emp_id
+        };
+
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:JSON.stringify(apiData),
+            crossDomain:true,
+            contentType:"application/json",
+            cache:false,
+            success:function(data){
+
+                $('#empUpdate-modal').modal('hide');
+                viewAllEmployees();
+            }
+        })
+
+
+    })
+
+
+
 
 
 })
