@@ -68,9 +68,18 @@ $(document).ready(function(){
                         '                                                                <td>'+data[i]['userName']+'</td>\n' +
                         '                                                                <td>'+data[i]['role']+'</td>\n' +
                         '                                                                <td>'+data[i]['status']+'</td>\n' +
-                        '                                                                <td><span class="employee-edit-btn" data-options={"id":"'+data[i]['id']+'"} style="color:blue;cursor: pointer">edit</span> || <span data-options={"id":"'+data[i]['id']+'"} class="employee-delete-btn" style="color: red;cursor: pointer">delete</span></td>\n' +
+                        '                                                                <td><span class="employee-edit-btn" data-options={"id":"'+data[i]['id']+'"} style="color:blue;cursor: pointer">edit</span></td>\n' +
                         '                                                            </tr>';
                 }
+
+                //
+                // template+='<tr>\n' +
+                //     '                                                                <td>'+data[i]['name']+'</td>\n' +
+                //     '                                                                <td>'+data[i]['userName']+'</td>\n' +
+                //     '                                                                <td>'+data[i]['role']+'</td>\n' +
+                //     '                                                                <td>'+data[i]['status']+'</td>\n' +
+                //     '                                                                <td><span class="employee-edit-btn" data-options={"id":"'+data[i]['id']+'"} style="color:blue;cursor: pointer">edit</span> || <span data-options={"id":"'+data[i]['id']+'"} class="employee-delete-btn" style="color: red;cursor: pointer">delete</span></td>\n' +
+                //     '                                                            </tr>';
 
                 $('.view-registered-employees').html(template);
             }
@@ -96,12 +105,13 @@ $(document).ready(function(){
             crossDomain:true,
             contentType:"application/json",
             success:function(data){
-
+                console.log(data);
                 $('#update-employee-id').val(data[0]['id']);
                 $('#update-employee-name').val(data[0]['name']);
                 $('#update-employee-email').val(data[0]['userName']);
                 $('#update-emp-password').val(data[0]['password']);
                 $('#update-employee-designation').val(data[0]['role']);
+                $('#update-employee-status').val(data[0]['status']);
 
             }
         })
@@ -118,6 +128,7 @@ $(document).ready(function(){
         var emp_email=$('#update-employee-email').val();
         var emp_role=$('#update-employee-designation').val();
         var emp_password=$('#update-emp-password').val();
+        var emp_status=$('#update-employee-status').val();
 
         var url='http://localhost:8080/user/updateEmployee';
         var apiData={
@@ -125,7 +136,8 @@ $(document).ready(function(){
             "password":emp_password,
             "role":emp_role,
             "userName":emp_email,
-            "id":emp_id
+            "id":emp_id,
+            "status":emp_status
         };
 
         $.ajax({
@@ -144,6 +156,10 @@ $(document).ready(function(){
 
 
     })
+
+
+
+
 
 
 

@@ -41,6 +41,18 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="vehicle-make">Employee Status</label>
+                            <select name="update-employee-status" id="update-employee-status" class="form-control">
+                                <option value="-">Select Employee Status</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <div  class="col-sm-6">
                             <input class="btn btn-primary form-control" type="submit" id="update-btn-emp-register" name="update-btn-emp-register" value="Update Employee">
                         </div>
