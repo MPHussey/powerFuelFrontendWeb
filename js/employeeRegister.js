@@ -23,7 +23,7 @@ $(document).ready(function(){
             "status":status
         };
 
-        console.log(apiData);
+
 
         var url="http://localhost:8080/user/register";
 
@@ -35,7 +35,7 @@ $(document).ready(function(){
             crossDomain:true,
             contentType:'application/json',
             success:function(data){
-                console.log(data);
+
                 $('.form-employeeRegister').trigger('reset');
                 viewAllEmployees();
 
@@ -60,7 +60,7 @@ $(document).ready(function(){
             cache: false,
             contentType: "application/json",
             success:function(data){
-                console.log(data);
+
                 var template='';
                 for(var i in data){
                     template+='<tr>\n' +
@@ -105,7 +105,7 @@ $(document).ready(function(){
             crossDomain:true,
             contentType:"application/json",
             success:function(data){
-                console.log(data);
+
                 $('#update-employee-id').val(data[0]['id']);
                 $('#update-employee-name').val(data[0]['name']);
                 $('#update-employee-email').val(data[0]['userName']);

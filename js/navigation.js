@@ -48,6 +48,7 @@ $(document).ready(function(){
         $('#fuel-request-page').css('display','none');
         $('#fuel-allocation-page').css('display','none');
         $('#fuel-dispatch-page').css('display','block');
+        $('#employee-register-page').css('display','none');
         
         //make all other pages diplay none
 
@@ -58,6 +59,8 @@ $(document).ready(function(){
         $('#station-register-page').css('display','none');
         $('#employee-register-page').css('display','block');
         $('#fuel-request-page').css('display','none');
+        $('#fuel-allocation-page').css('display','none');
+        $('#fuel-dispatch-page').css('display','none');
         //make all other pages diplay none
 
     });
@@ -93,6 +96,9 @@ $(document).ready(function(){
                 $('#station-register-page').css('display','none');
                 $('#employee-register-page').css('display','block');
 
+                $('#fuel-allocation-page').css('display','none');
+                $('#fuel-dispatch-page').css('display','none');
+
                 break;
             case '#fuel-allocation':
                     /*Add your default view all items section*/
@@ -100,6 +106,7 @@ $(document).ready(function(){
                     $('#fuel-request-page').css('display','none');
                     $('#station-register-page').css('display','none');
                     $('#fuel-dispatch-page').css('display','none');
+                $('#employee-register-page').css('display','none');
 
                     break;
             case '#fuel-dispatch':
@@ -108,6 +115,7 @@ $(document).ready(function(){
                     $('#fuel-allocation-page').css('display','none');
                     $('#fuel-request-page').css('display','none');
                     $('#station-register-page').css('display','none');
+                $('#employee-register-page').css('display','none');
                     
     
                     break;
