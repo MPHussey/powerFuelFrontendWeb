@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Power Fuel Dashboard</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/itemreader-style.css">
+    <link rel="stylesheet" type="text/css" href="./Resources/css/JsQRScanner.css">
+    <script type="text/javascript" src="./js/qrCodeJs/jsqrscanner.nocache.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -27,7 +30,7 @@
                 <li id="nav-fuel-allocation" class="nav-item"><a class="nav-link" href="#fuel-allocation"><i class="fa-sharp fa-solid fa-right-to-bracket"></i><span>Fuel Allocations</span></a></li>
                 <li id="nav-fuel-dispatch" class="nav-item"><a class="nav-link" href="#fuel-dispatch"><i class="fa-sharp fa-solid fa-truck-fast"></i><span>Fuel Dispatches</span></a></li>
 
-                <li id="nav-station-tokenReader" class="nav-item"><a class="nav-link" href="#"><i class="fas fa-ticket-alt"></i><span>Token Reader</span></a></li>
+                <li id="nav-station-tokenReader" class="nav-item"><a class="nav-link" href="#qrReader"><i class="fas fa-ticket-alt"></i><span>Token Reader</span></a></li>
                 <li id="nav-station-dashboard" class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
 
                 <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-map-marked-alt"></i><span>Register Stations</span></a></li>
@@ -73,6 +76,7 @@
 
 
                 <?php include("pages/employee-register.php") ?>
+                <?php include("pages/fuel-handler.php") ?>
 
 
 
@@ -89,6 +93,7 @@
 <?php include "modals/fuelRequestModal.php" ?>
 <?php include "modals/employeeRegisterModal.php" ?>
 <?php include "modals/employeeDetailsUpdateModal.php"; ?>
+<?php include "modals/fuelTokenModal.php"?>
 
 
 <script src="assets/js/jquery.min.js"></script>
@@ -106,6 +111,7 @@
 
 
 <script src="js/employeeRegister.js"></script>
+<script src="js/tokenHandler.js"></script>
 
 <script>
     $(document).ready(function(){
@@ -147,7 +153,6 @@
 
             }
 
-
         }
 
         /*----logout btn handler----*/
@@ -159,6 +164,8 @@
 
     });
 </script>
+
+
 
 </body>
 
