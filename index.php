@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Power Fuel Dashboard</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/itemreader-style.css">
+    <link rel="stylesheet" type="text/css" href="./Resources/css/JsQRScanner.css">
+    <script type="text/javascript" src="./js/qrCodeJs/jsqrscanner.nocache.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -24,16 +27,21 @@
             </a>
             <hr class="sidebar-divider my-0">
             <ul class="navbar-nav text-light" id="accordionSidebar">
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-map-marked-alt"></i><span>Register Stations</span></a></li>
-                <li id="nav-fuel-request" class="nav-item"><a class="nav-link" href="#fuel-request"><i class="fa-solid fa-gas-pump"></i><span>Fuel Requests</span></a></li>
-
                 <li id="nav-fuel-allocation" class="nav-item"><a class="nav-link" href="#fuel-allocation"><i class="fa-sharp fa-solid fa-right-to-bracket"></i><span>Fuel Allocations</span></a></li>
                 <li id="nav-fuel-dispatch" class="nav-item"><a class="nav-link" href="#fuel-dispatch"><i class="fa-sharp fa-solid fa-truck-fast"></i><span>Fuel Dispatches</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Title -4</span></a></li>
-                </ul>
 
+                <li id="nav-station-tokenReader" class="nav-item"><a class="nav-link" href="#qrReader"><i class="fas fa-ticket-alt"></i><span>Token Reader</span></a></li>
+                <li id="nav-station-dashboard" class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+
+                <li id="nav-station-register" class="nav-item"><a class="nav-link" href="#register-station"><i class="fas fa-map-marked-alt"></i><span>Register Stations</span></a></li>
+                <li id="nav-fuel-request" class="nav-item"><a class="nav-link" href="#fuel-request"><i class="fa-solid fa-gas-pump"></i><span>Fuel Requests</span></a></li>
                 <li id="nav-employee-register" class="nav-item"><a class="nav-link" href="#emp-register"><i class="fas fa-users"></i><span>Register Employees</span></a></li>
+
+
+
+            </ul>
+
+
                 <!--<li class="nav-item"><a class="nav-link" href="register.php"><i class="fas fa-user-circle"></i><span>Register</span></a></li> ----->
             </ul>
 
@@ -47,12 +55,12 @@
                     <ul class="navbar-nav flex-nowrap ml-auto">
                         <li class="nav-item dropdown no-arrow">
                             <div class="nav-item dropdown no-arrow mt-3">
-                                <span class="d-none d-lg-inline mr-4 text-gray-600 small">Welcome !</span>
+                                <span class="d-none d-lg-inline mr-4 text-gray-600 small">Welcome ! <span id="logger-name"></span> </span>
                             </div>
                         </li>
                         <div class="d-none d-sm-block topbar-divider"></div>
                         <li class="nav-item dropdown no-arrow">
-                            <a class="text-decoration-none" href="logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw mt-3 text-gray-400"></i>&nbsp;Logout</a>
+                            <a id="logout-btn" class="text-decoration-none" href=""><i class="fas fa-sign-out-alt fa-sm fa-fw mt-3 text-gray-400"></i>&nbsp;Logout</a>
                         </li>
 
                     </ul>
@@ -68,6 +76,7 @@
 
 
                 <?php include("pages/employee-register.php") ?>
+                <?php include("pages/fuel-handler.php") ?>
 
 
 
@@ -83,6 +92,8 @@
 <?php include "modals/stationRegisterModal.php"?>
 <?php include "modals/fuelRequestModal.php" ?>
 <?php include "modals/employeeRegisterModal.php" ?>
+<?php include "modals/employeeDetailsUpdateModal.php"; ?>
+<?php include "modals/fuelTokenModal.php"?>
 
 
 <script src="assets/js/jquery.min.js"></script>
@@ -100,6 +111,61 @@
 
 
 <script src="js/employeeRegister.js"></script>
+<script src="js/tokenHandler.js"></script>
+
+<script>
+    $(document).ready(function(){
+        sessionHandler();
+        function sessionHandler(){
+            var logindata=localStorage.getItem('loginData');
+            if(logindata===null){
+                window.location.replace("http://localhost/powerFuelFrontendWeb/pages/login.php");
+            }else{
+                var convertedData=JSON.parse(logindata);
+
+                var role=convertedData.role;
+                var name=convertedData.name;
+                console.log(role);
+                console.log(name);
+                $('#logger-name').html(name);
+                if(role=="Admin"){
+                    $('#nav-fuel-dispatch').css({'visibility':'hidden'});
+                    $('#nav-fuel-allocation').css({'visibility':'hidden'});
+                    $('#nav-station-tokenReader').css({'visibility':'hidden'});
+
+                }else if(role == 'Office'){
+                    $('#nav-station-dashboard').css({'visibility':'hidden'});
+                    $('#nav-station-register').css({'visibility':'hidden'});
+                    $('#nav-employee-register').css({'visibility':'hidden'});
+                    $('#nav-fuel-request').css({'visibility':'hidden'});
+                    $('#nav-station-tokenReader').css({'visibility':'hidden'});
+
+                }else if(role == 'Fuel Handler'){
+                    $('#nav-fuel-dispatch').css({'visibility':'hidden'});
+                    $('#nav-fuel-allocation').css({'visibility':'hidden'});
+                    $('#nav-station-dashboard').css({'visibility':'hidden'});
+                    $('#nav-station-register').css({'visibility':'hidden'});
+                    $('#nav-employee-register').css({'visibility':'hidden'});
+                    $('#nav-fuel-request').css({'visibility':'hidden'});
+
+
+                }
+
+            }
+
+        }
+
+        /*----logout btn handler----*/
+        $('#logout-btn').on('click',function(event){
+            event.preventDefault();
+            localStorage.clear();
+            window.location.replace("http://localhost/powerFuelFrontendWeb/pages/login.php");
+        })
+
+    });
+</script>
+
+
 
 </body>
 

@@ -10,6 +10,7 @@ $(document).ready(function(){
         $('#fuel-dispatch-page').css('display','none');
 
         $('#employee-register-page').css('display','none');
+        $('#token-handling-page').css('display','none');
 
         //make all other pages diplay none
 
@@ -23,6 +24,7 @@ $(document).ready(function(){
         $('#fuel-request-page').css('display','block');
         $('#fuel-allocation-page').css('display','none');
         $('#fuel-dispatch-page').css('display','none');
+        $('#token-handling-page').css('display','none');
         
         //make all other pages diplay none
 
@@ -36,6 +38,7 @@ $(document).ready(function(){
         $('#fuel-request-page').css('display','none');
         $('#fuel-allocation-page').css('display','block');
         $('#fuel-dispatch-page').css('display','none');
+        $('#token-handling-page').css('display','none');
         
         //make all other pages diplay none
 
@@ -48,6 +51,8 @@ $(document).ready(function(){
         $('#fuel-request-page').css('display','none');
         $('#fuel-allocation-page').css('display','none');
         $('#fuel-dispatch-page').css('display','block');
+        $('#employee-register-page').css('display','none');
+        $('#token-handling-page').css('display','none');
         
         //make all other pages diplay none
 
@@ -58,6 +63,21 @@ $(document).ready(function(){
         $('#station-register-page').css('display','none');
         $('#employee-register-page').css('display','block');
         $('#fuel-request-page').css('display','none');
+        $('#fuel-allocation-page').css('display','none');
+        $('#fuel-dispatch-page').css('display','none');
+        $('#token-handling-page').css('display','none');
+        //make all other pages diplay none
+
+    });
+
+    $('#nav-station-tokenReader').on('click',function(){
+        /*---Panel Handling-----*/
+        $('#station-register-page').css('display','none');
+        $('#employee-register-page').css('display','none');
+        $('#fuel-request-page').css('display','none');
+        $('#fuel-allocation-page').css('display','none');
+        $('#fuel-dispatch-page').css('display','none');
+        $('#token-handling-page').css('display','block');
         //make all other pages diplay none
 
     });
@@ -74,6 +94,7 @@ $(document).ready(function(){
 
 
                 $('#employee-register-page').css('display','none');
+                $('#token-handling-page').css('display','none');
 
                 break;
             case '#fuel-request':
@@ -86,12 +107,17 @@ $(document).ready(function(){
 
 
                 $('#employee-register-page').css('display','none');
+                $('#token-handling-page').css('display','none');
                 break;
             case '#emp-register':
                 /*Add your default view all items section*/
                 $('#fuel-request-page').css('display','none');
                 $('#station-register-page').css('display','none');
                 $('#employee-register-page').css('display','block');
+
+                $('#fuel-allocation-page').css('display','none');
+                $('#fuel-dispatch-page').css('display','none');
+                $('#token-handling-page').css('display','none');
 
                 break;
             case '#fuel-allocation':
@@ -100,6 +126,8 @@ $(document).ready(function(){
                     $('#fuel-request-page').css('display','none');
                     $('#station-register-page').css('display','none');
                     $('#fuel-dispatch-page').css('display','none');
+                $('#employee-register-page').css('display','none');
+                $('#token-handling-page').css('display','none');
 
                     break;
             case '#fuel-dispatch':
@@ -108,9 +136,20 @@ $(document).ready(function(){
                     $('#fuel-allocation-page').css('display','none');
                     $('#fuel-request-page').css('display','none');
                     $('#station-register-page').css('display','none');
-                    
-    
+                $('#employee-register-page').css('display','none');
+                $('#token-handling-page').css('display','none');
+
                     break;
+            case '#qrReader':
+                /*Add your default view all items section*/
+                $('#fuel-dispatch-page').css('display','none');
+                $('#fuel-allocation-page').css('display','none');
+                $('#fuel-request-page').css('display','none');
+                $('#station-register-page').css('display','none');
+                $('#employee-register-page').css('display','none');
+                $('#token-handling-page').css('display','block');
+
+                break;
                 
         }
     }
