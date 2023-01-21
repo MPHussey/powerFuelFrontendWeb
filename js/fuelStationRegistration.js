@@ -93,13 +93,27 @@ $(document).ready(function(){
             success:function(data){
                 var temp="";
                 for(var i in data){
+                    var district='';
+                    switch (data[i]["district"]){
+                        case 1:
+                            district="Gampaha";
+                            break;
+                        case 2:
+                            district="Colombo";
+                            break;
+                        case 3:
+                            district="Galle";
+                            break;
+
+                    }
+
                     temp+='<tr>\n' +
                         '                                                <td></td>\n' +
                         '                                                <td>'+data[i]["name"]+'</td>\n' +
                         '                                                <td>'+data[i]["address"]+'</td>\n' +
                         '                                                <td>'+data[i]["mobile"]+'</td>\n' +
                         '                                                <td>'+data[i]["email"]+'</td>\n' +
-                        '                                                <td>'+data[i]["district"]+'</td>\n' +
+                        '                                                <td>'+district+'</td>\n' +
                         '                                                <td>'+data[i]["petrolCapacity"]+'</td>\n' +
                         '                                                <td>'+data[i]["dieselCapacity"]+'</td>\n' +
                         '                                                <td><img data-options={"id":"'+data[i]["id"]+'"} style="cursor:pointer" class="update-station-img" width="20px" src="./imgs/icons8-edit-20.png" alt="edit"></td>\n' +

@@ -38,15 +38,15 @@
                                         <input class="form-control" name="password" id="password" type="password" placeholder="Password">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <select class="form-control" name="login-location" id="login-location">
-                                            <option value="-">-Select Station-</option>
-                                            <option value="1">-Station 1</option>
-                                            <option value="2">-Station 2</option>
-                                        </select>
-                                    </div>
-                                </div>
+<!--                                <div class="row">-->
+<!--                                    <div class="col">-->
+<!--                                        <select class="form-control" name="login-location" id="login-location">-->
+<!--                                            <option value="-">-Select Station-</option>-->
+<!--                                            <option value="1">-Station 1</option>-->
+<!--                                            <option value="2">-Station 2</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="row">
                                     <div class="col">
                                         <button name="btn-login" name="btn-login" id="btn-login" class="form-control" type="submit">LogIn</button>

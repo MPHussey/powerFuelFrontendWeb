@@ -50,6 +50,7 @@
                                 <option value="-">Select District</option>
                                 <option value="1">Gampaha</option>
                                 <option value="2">Colombo</option>
+                                <option value="3">Galle</option>
 
                             </select>
                         </div>

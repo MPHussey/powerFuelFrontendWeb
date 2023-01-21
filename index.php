@@ -132,10 +132,11 @@
                     $('#nav-fuel-dispatch').css({'visibility':'hidden'});
                     $('#nav-fuel-allocation').css({'visibility':'hidden'});
                     $('#nav-station-tokenReader').css({'visibility':'hidden'});
+                    $('#nav-station-register').css({'visibility':'hidden'});
 
                 }else if(role == 'Office'){
                     $('#nav-station-dashboard').css({'visibility':'hidden'});
-                    $('#nav-station-register').css({'visibility':'hidden'});
+
                     $('#nav-employee-register').css({'visibility':'hidden'});
                     $('#nav-fuel-request').css({'visibility':'hidden'});
                     $('#nav-station-tokenReader').css({'visibility':'hidden'});
