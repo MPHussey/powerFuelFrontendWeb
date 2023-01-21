@@ -71,12 +71,15 @@ $(document).ready(function(){
 
             for(var i in data){
                template+='<tr>\n' +
+
                    '                                    <td>'+data[i]["fuelRequests"]["request_date"]+'</td>\n' +
                    '                                    <td>'+data[i]["fuel_type"]+'</td>\n' +
                    '                                    <td>'+data[i]["batch_num"]+'</td>\n' +
                    '                                    <td>'+data[i]["requested_quantity"]+'</td>\n' +
                    '                                    <td>'+data[i]["received_quantity"]+'</td>\n' +
                    '                                    <td>'+data[i]["status"]+'</td>\n' +
+                   '                                    <td style="visibility: hidden">'+data[i]["fuelRequests"]["station_id"]+'</td>\n' +
+                   '                                    <td style="visibility: hidden">'+data[i]["request_id"]+'</td>\n' +
                    '                                    <td></td>\n' +
                    '                                </tr>';
 

@@ -11,6 +11,7 @@
                         <table class="table my-0" id="dataTable">
                             <thead>
                             <tr>
+
                                 <th>Rq. Date</th>
                                 <th>Fuel Type</th>
                                 <th>Batch No.</th>
