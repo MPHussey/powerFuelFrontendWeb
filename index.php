@@ -101,6 +101,7 @@
 <script src="assets/js/chart.min.js"></script>
 <script src="assets/js/bs-init.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<script src="js/notify.js"></script>
 <script src="assets/js/theme.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/fuelStationRegistration.js"></script>

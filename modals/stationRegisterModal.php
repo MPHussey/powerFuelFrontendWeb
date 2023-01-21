@@ -35,7 +35,7 @@
                     <div class="form-group row">
                         <div class="col-sm-6">
                             <label for="vehicle-model">Mobile Number</label>
-                            <input class="form-control" type="text" id="mobile-number" name="mobile-number" placeholder="Enter Mobile Number" required>
+                            <input class="form-control" type="number" id="mobile-number" name="mobile-number" placeholder="Enter Mobile Number" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="vehicle-year">Email Address</label>
@@ -67,11 +67,11 @@
                     <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="vehicle-year">Petrol Capacity</label>
-                                <input class="form-control" type="text" id="petrol-capacity" name="petrol-capacity" placeholder="Enter Petrol Capacity" required>
+                                <input class="form-control" type="number" id="petrol-capacity" name="petrol-capacity" placeholder="Enter Petrol Capacity" required>
                             </div>
                             <div class="col-sm-6">
                                 <label for="vehicle-year">Diesel Capacity</label>
-                                <input class="form-control" type="text" id="diesel-capacity" name="diesel-capacity" placeholder="Enter Diesel Capacity" required>
+                                <input class="form-control" type="number" id="diesel-capacity" name="diesel-capacity" placeholder="Enter Diesel Capacity" required>
                             </div>
 
                     </div>

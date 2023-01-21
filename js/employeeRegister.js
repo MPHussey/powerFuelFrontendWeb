@@ -35,7 +35,9 @@ $(document).ready(function(){
             crossDomain:true,
             contentType:'application/json',
             success:function(data){
-
+                if(data=="Account Already Exist"){
+                    $.notify("Account Already Exist","error");
+                }
                 $('.form-employeeRegister').trigger('reset');
                 viewAllEmployees();
 
