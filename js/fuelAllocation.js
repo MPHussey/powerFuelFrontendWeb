@@ -44,3 +44,21 @@ function allocateFuel(){
 
 
 
+$(document).ready(function () {
+    $(document).on('click', '#view-all-requests tr', function () {
+        var col0 = $(this).find('td:eq(0)').text();
+        var col2 = $(this).find('td:eq(2)').text();
+        var col3 = $(this).find('td:eq(3)').text();
+        var col5 = $(this).find('td:eq(5)').text();
+       
+        
+        $('#dispatch-allocation-id').val(col0);
+        $('#dispatch-Fuel-Quantity').val(col2);
+        $('#dispatch-fuelType').val(col3);
+        $('#dispatch-stationId').val(col5);
+
+        
+        
+
+    })
+})
